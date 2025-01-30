@@ -6,15 +6,17 @@
 
 body {
     margin: 0;                          
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'liberation-italic';
     text-rendering: optimizeLegibility;
-    display: flex;                       
+    display: flex;
+    overflow: visible;                       
     flex-direction: column;              
     align-items: center;                 
     justify-content: center;             
     width: 100%;                         
     text-align: center;
+    cursor: url('cursors/Red\ White\ Hand\ Pointer.cur'), auto;
 }
 
 
@@ -42,16 +44,16 @@ object {
 
 
 .content {
-    max-width: 350px;
+    max-width: 370px;
     margin: auto;
     text-align: center;
     width: 100%;
 }
 
 .header {
+    max-width: 370px;
     padding-top: 1.2em;
     margin: auto;
-    max-width: 350px;
     text-align: center;
     width: 100%;
 }
@@ -59,6 +61,7 @@ object {
 a {
     color: black;
     text-decoration: none;
+    cursor: url("cursors/Red\ White\ Hand\ Pointers\ Cursor.cur"), auto;
 }
 
 a:hover {
@@ -82,7 +85,7 @@ a:active {
 .footer {
     text-align: center;
     font-size: 12px;
-    margin-top: 4em;
+    margin-top: 1.2em;
     max-width: 350px;
     width: 100%
 }
@@ -124,4 +127,58 @@ iframe {
         padding-left: 0.5em;
         padding-right: 0.5em;
     }
+}
+
+/* Loader */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    gap: 0;
+    color: #C71919
+}
+
+.loader {
+    width: 120px; /* Width of the loading bar */
+    height: 12px; /* Height of the loading bar */
+    display: flex;
+    overflow: hidden;
+    border: 2px solid #C71919; /* Retro-style border */
+}
+
+.loader-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #C71919; /* Filling color */
+    animation: fillBar 1s linear forwards; /* Animating the fill */
+}
+
+@keyframes fillBar {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* Hide loader after animation is complete */
+body.loading .content {
+    display: none;
+}
+
+body.loading .loader-container {
+    display: flex;
+}
+
+body:not(.loading) .loader-container {
+    display: none;
 }
