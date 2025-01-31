@@ -1,0 +1,83 @@
+@font-face {
+    font-family: liberation-italic;
+    src: url(../fonts/LiberationMono-Italic.ttf);
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    font-size: 12px;
+    font-family: 'liberation-italic';
+    text-rendering: optimizeLegibility;
+    margin: auto;
+    cursor: url('./../cursors/Red\ White\ Hand\ Pointer.cur'), auto;
+}
+
+.content {
+    max-width: 370px;
+    margin: auto;
+    text-align: left;
+    width: 100%;
+}
+
+.header {
+    padding-top: 1.2em;
+    text-align: center;
+}
+
+.footer {
+    padding-top: 1.2em;
+}
+
+p {
+    line-height: 1.6;
+    margin: 0;
+    padding-bottom: 1.2em;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C71919;
+    text-decoration: underline;
+    cursor: url("./../cursors/Red\ White\ Hand\ Pointers\ Cursor.cur"), auto;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.red-link {
+    color: #C71919;
+    text-decoration: underline;
+    cursor: url("./../cursors/Red\ White\ Hand\ Pointers\ Cursor.cur"), auto;
+}
+
+img {
+    max-width: 350px;
+    padding-bottom: 1.2em;
+}
+
+iframe {
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+}
+
+/* margin on mobile */
+@media (max-width: 640px) {
+    body {
+        font-size: 12px;
+    }
+
+    .content {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+}
